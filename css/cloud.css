@@ -1,0 +1,120 @@
+/*Cloud CSS*/
+
+*{
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+:root {
+	--sky: rgb(196, 228, 253);
+	--cloud: #fff;
+	--bg: rgb(249, 249, 246);
+	--hl: rgb(27, 47, 144);
+	--t: 2s;
+}
+
+.sky {
+	display: block;
+	width: 100%;
+	height: 60%;
+	background: linear-gradient(360deg, #fff 0%, var(--sky) 85%);
+}
+
+/*Clouds*/
+.cloud{
+	width: 205px;
+	height:65px;
+	background: var(--cloud);
+	border-radius: 50% / 40px;
+	position: relative;
+	top: 200px;
+	left: 80%;
+	transform: (-70%, 0);
+}
+
+.cloud:before,
+.cloud:after {
+	content: '';
+	width: 95px;
+	height: 80px;
+	border-radius: 100px;
+	background: var(--cloud);
+	position: absolute;
+	top:-15px;
+	left:5px;
+	transform: rotate(60deg);
+}
+
+.cloud:after{
+	width: 120px;
+	height: 120px;
+	top:-55px;
+	left: auto;
+	right: 15px;
+}
+
+
+.cloud:nth-child(1){
+	opacity: .9;
+	animation:cloudMove1 8.5s linear infinite;
+	position: absolute;
+	top: 150px;
+	transform: scale(1.2);
+	z-index: 1;
+}
+
+.cloud:nth-child(2){
+	opacity: .7;
+	animation:cloudMove2 11s linear infinite;
+	position: absolute;
+	top: 270px;
+}
+
+.cloud:nth-child(3){	
+	opacity: .7;
+	animation:cloudMove3 11.5s linear infinite;
+	position: absolute;
+	top: 50px;
+}
+
+.cloud:nth-child(4){
+	opacity: .7;
+	animation:cloudMove4 13s linear infinite;
+	position: absolute;
+	top: 65px;
+}
+
+.cloud:nth-child(5){
+	opacity: .6;
+	animation:cloudMove5 15s linear infinite;
+	position: absolute;
+	top: 220px;
+	transform: scale(.65);
+}
+
+/*Cloud animation*/
+@keyframes cloudMove1{
+	from {left:100%;}
+	to 	 {left:-90%;}
+}
+
+@keyframes cloudMove2{
+	from {left:95%;}
+	to   {left:-120%;}
+}
+@keyframes cloudMove3{
+	from {left:90%;}
+	to   {left:-110%;}
+}
+@keyframes cloudMove4{
+	from {left:130%;}
+	to   {left:-70%;}
+}
+@keyframes cloudMove5{
+	from {left:120%;}
+	to   {left:-80%;}
+}
+	
+
+		
